@@ -1,0 +1,29 @@
+<form class="emp-form" #entryForm="ngForm" (ngSubmit)="onSubmit()" >
+
+  <div class="form-row">
+    
+      <input required placeholder="Name" name="Name" #Name="ngModel" [(ngModel)]="model.Name" class="form-control" >
+      <!-- <div class="validation-error"   *ngIf="Name.invalid && Name.touched" >This Field is Required</div>  -->
+  </div>
+
+<div class="form-row">  
+  
+    <input required placeholder="Phone Number" name="PhoneNumber" #PhoneNumber="ngModel" [(ngModel)]="model.PhoneNumber" class="form-control" >
+    <!-- <div class="validation-error"   *ngIf="PhoneNumber.invalid && PhoneNumber.touched" >This Field is Required</div>  -->
+   
+</div>
+
+
+<div class="form-row">  
+    <div class="form-group">
+      <button type="submit" Class="btn btn-lg btn-block btn-info">Submit</button>
+    </div>
+  
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btnblock btn-secondary" (click)="resetFrom(entryForm)">Reset</button>
+    </div> 
+</div>
+
+
+  
+</form>

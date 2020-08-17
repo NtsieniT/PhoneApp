@@ -1,0 +1,17 @@
+<table class="table table-sm table-hover">
+  <tbody>
+  <tr *ngFor="let entry of entriesList">
+    <td>{{entry.name}} - {{entry.phoneNumber}}</td>
+    <td>
+      <!-- <a class="btn" (click)="showForEdit(entry)">
+        <i class="fas fa-pen"></i>
+      </a> -->
+    </td>
+    <td>
+      <a class="btn text-danger" (click)="onDelete(entry.id)">
+        <i class="fas fa-trash"></i>
+      </a>
+    </td>
+  </tr>
+</tbody>
+</table>
